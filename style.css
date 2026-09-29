@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b12;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #202632;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #00c8ff;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #aeb6c3;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #20d47a;
+    border-radius: 50%;
+}
+
+
+
+
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.welcome {
+    color: #8993a3;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 65px;
+    letter-spacing: 8px;
+    margin-top: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #00c8ff,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: #8993a3;
+    margin-top: 5px;
+}
+
+
+
+
+.voice-area {
+    margin: 55px 0 40px;
+}
+
+.outer-circle {
+    width: 190px;
+    height: 190px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #153b4d;
+    box-shadow: 0 0 35px rgba(0, 200, 255, 0.15);
+}
+
+.middle-circle {
+    width: 145px;
+    height: 145px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #101722;
+}
+
+.mic-button {
+    width: 90px;
+    height: 90px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #00aeda;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.mic-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.5);
+}
+
+#listenText {
+    margin-top: 20px;
+    color: #8993a3;
+}
+
+
+
+.listening .outer-circle {
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 45px rgba(0, 200, 255, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+    }
+}
+
+
+
+.command-box {
+    background: #0e131c;
+
+    border: 1px solid #202936;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: left;
+}
+
+.command-section {
+    padding: 8px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #00c8ff;
+
+    margin-bottom: 10px;
+}
+
+#userCommand,
+#jarvisResponse {
+    color: #d5dbe3;
+    line-height: 1.5;
+}
+
+.line {
+    height: 1px;
+    background: #202936;
+
+    margin: 15px 0;
+}
+
+
+
+h2 {
+    margin: 40px 0 20px;
+    font-size: 20px;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.quick-actions button {
+    background: #101620;
+
+    border: 1px solid #222d3a;
+
+    border-radius: 10px;
+
+    padding: 18px 10px;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.quick-actions button:hover {
+    border-color: #00bde8;
+    transform: translateY(-3px);
+}
+
+.quick-actions span {
+    font-size: 13px;
+    color: #aeb6c3;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid #202632;
+
+    color: #626c7b;
+
+    font-size: 13px;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .outer-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .middle-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .mic-button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

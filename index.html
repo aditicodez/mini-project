@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JARVIS - Voice Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+        <header>
+            <div class="logo">
+                <span>J</span>ARVIS
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="systemStatus">System Ready</span>
+            </div>
+        </header>
+
+
+        
+        <main>
+
+            <p class="welcome">Good Morning, I am</p>
+
+            <h1>JARVIS</h1>
+
+            <p class="subtitle">
+                Your personal voice assistant
+            </p>
+
+
+            
+            <div class="voice-area">
+
+                <div class="outer-circle">
+                    <div class="middle-circle">
+                        <button id="micButton" class="mic-button">
+                            🎙️
+                        </button>
+                    </div>
+                </div>
+
+                <p id="listenText">Click the microphone to speak</p>
+
+            </div>
+
+
+            
+            <div class="command-box">
+
+                <div class="command-section">
+                    <p class="small-title">YOUR COMMAND</p>
+
+                    <p id="userCommand">
+                        Waiting for your command...
+                    </p>
+                </div>
+
+
+                <div class="line"></div>
+
+
+                <div class="command-section">
+                    <p class="small-title">JARVIS</p>
+
+                    <p id="jarvisResponse">
+                        Hello! How can I help you today?
+                    </p>
+                </div>
+
+            </div>
+
+
+            
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+
+                <button onclick="quickCommand('What is the time?')">
+                    🕐
+                    <span>Time</span>
+                </button>
+
+                <button onclick="quickCommand('Open Google')">
+                    🔎
+                    <span>Google</span>
+                </button>
+
+                <button onclick="quickCommand('Open YouTube')">
+                    ▶️
+                    <span>YouTube</span>
+                </button>
+
+                <button onclick="quickCommand('Tell me a joke')">
+                    😄
+                    <span>Joke</span>
+                </button>
+
+            </div>
+
+        </main>
+
+
+        
+        <footer>
+            <p>JARVIS Voice Assistant • Mini Project</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
